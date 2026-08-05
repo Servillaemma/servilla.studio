@@ -4,6 +4,7 @@
 @font-face { font-family: "Caviar Dreams"; src: url("/fonts/caviar-dreams-bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
 @font-face { font-family: "Montserrat"; src: url("/fonts/montserrat.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: "Arial Black Local"; src: url("/fonts/arial-black.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Arial Regular Local"; src: url("/fonts/arial-regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
 
 :root { --ink: #050505; --paper: #fafafa; }
 * { box-sizing: border-box; }
@@ -95,13 +96,14 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .illustration-design > p { margin: 1.5% 0 0; font-family: "Montserrat", sans-serif; font-size: clamp(11px, 1.05vw, 17px); font-weight: 600; line-height: 1.15; }
 
 .collaboration-design { min-height: min(68vw, 900px); }
-.collab-copy { position: absolute; left: 6%; top: 19%; width: 25%; font-family: "Montserrat", sans-serif; }
+.collab-copy { position: absolute; left: 6%; top: 19%; width: 25%; font-family: "Arial Regular Local", Arial, sans-serif; font-weight: 400; }
 .collab-copy h4 { margin: 0 0 10px; font-family: "Arial Black Local", sans-serif; font-size: clamp(17px, 1.55vw, 27px); text-transform: uppercase; }
-.collab-copy .concept { margin: 0 0 34px; font-size: clamp(11px, .9vw, 15px); }
-.collab-copy p { margin: 0 0 12px; font-size: clamp(11px, .95vw, 16px); font-weight: 800; line-height: 1.1; }
-.collab-visual { position: absolute; right: 0; top: 19%; width: 67%; }
-.collab-scene { width: 100%; }
-.collab-product { position: absolute; z-index: 2; right: 8%; bottom: -29%; width: 48%; mix-blend-mode: multiply; }
+.collab-copy .concept { margin: 0 0 34px; font-size: clamp(11px, .9vw, 15px); font-weight: 300; }
+.collab-copy p { margin: 0 0 12px; font-size: clamp(11px, .95vw, 16px); font-weight: 400; line-height: 1.1; text-align: justify; text-align-last: justify; }
+.collab-copy .concept { text-align: left; text-align-last: auto; }
+.collab-visual { position: absolute; right: 0; top: 19%; width: 67%; min-height: 61%; isolation: isolate; }
+.collab-scene { position: relative; z-index: 1; width: 100%; }
+.collab-product { position: absolute; z-index: 3; right: 8%; bottom: -29%; width: 48%; mix-blend-mode: multiply; }
 
 .trends-design { min-height: min(68vw, 900px); }
 .trends-copy { position: absolute; left: 2%; top: 31%; width: 29%; font-family: "Montserrat", sans-serif; font-size: clamp(10px, .95vw, 16px); font-weight: 700; line-height: 1.16; }
