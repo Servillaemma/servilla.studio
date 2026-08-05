@@ -103,7 +103,7 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .collab-copy .concept { text-align: left; text-align-last: auto; }
 .collab-visual { position: absolute; right: 0; top: 19%; width: 67%; min-height: 61%; isolation: isolate; }
 .collab-scene { position: relative; z-index: 1; width: 100%; }
-.collab-product { position: absolute; z-index: 3; right: 8%; bottom: -29%; width: 48%; mix-blend-mode: multiply; }
+.collab-product { position: absolute; z-index: 3; left: 66.666%; right: auto; bottom: 0; width: 48%; transform: translate(-50%, 50%); mix-blend-mode: multiply; }
 
 .trends-design { min-height: min(68vw, 900px); }
 .trends-copy { position: absolute; left: 2%; top: 31%; width: 29%; font-family: "Montserrat", sans-serif; font-size: clamp(10px, .95vw, 16px); font-weight: 700; line-height: 1.16; }
@@ -168,8 +168,8 @@ footer a { text-underline-offset: 4px; }
   .collab-copy, .collab-visual, .trends-copy, .trend-board, .brand { position: static; width: 100%; }
   .collab-copy { margin-top: 34px; }
   .collab-copy .concept { margin-bottom: 18px; }
-  .collab-visual { margin-top: 26px; }
-  .collab-product { position: relative; right: auto; bottom: auto; width: 72%; margin: -15% 0 0 auto; }
+  .collab-visual { position: relative; margin: 26px 0 35%; }
+  .collab-product { position: absolute; left: 66.666%; right: auto; bottom: 0; width: 64%; margin: 0; transform: translate(-50%, 50%); }
   .trends-design::after { display: none; }
   .trends-copy { margin: 34px 0 26px; font-size: 11px; line-height: 1.3; }
   .trend-board { margin-bottom: 8px; }
