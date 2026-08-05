@@ -25,13 +25,23 @@ const works = [
 
 function ProjectSection({ type }: { type: string }) {
   if (type === "style") {
-    const images = ["07.jpg", "01.png", "05.png", "04.png", "09.jpg", "03.png", "06.png", "08.jpg", "02.png"];
+    const images = [
+      "editorial-flatlay.jpg",
+      "editorial-coat.png",
+      "editorial-bag.png",
+      "editorial-chair-pink.png",
+      "editorial-hanger-blue.jpg",
+      "editorial-look.png",
+      "editorial-chair-denim.png",
+      "editorial-hanger-stripes.jpg",
+      "editorial-red.png",
+    ];
     return (
       <div className="designed-section style-design">
         <h3>Style</h3>
         <div className="style-collage">
           {images.map((image, index) => (
-            <img key={image} src={`/sections/style/${image}`} alt={`Composition de style ${index + 1}`} loading="lazy" />
+            <img key={image} src={`/images/${image}`} alt={`Composition de style ${index + 1}`} loading="lazy" />
           ))}
         </div>
       </div>
