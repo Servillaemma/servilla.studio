@@ -67,14 +67,55 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .work-list details[open] .view-more::after { content: " — close"; }
 .work-disabled { opacity: .36; cursor: default; }
 .coming-soon { justify-self: end; font-size: 10px; font-weight: 800; text-transform: uppercase; }
-.project-expansion { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(8px, 1.4vw, 22px); padding: 0 0 clamp(28px, 5vw, 76px); animation: reveal .4s ease both; }
-.project-expansion figure { margin: 0; background: #eee; overflow: hidden; }
-.project-expansion img { width: 100%; height: auto; }
-.project-cover { grid-column: 1 / -1; }
-.project-cover img { width: 100%; max-height: 74svh; object-fit: contain; background: var(--paper); }
-.project-style figure:not(.project-cover) img { aspect-ratio: 4 / 5; object-fit: cover; }
-.project-illustration figure:not(.project-cover) img, .project-trends figure:not(.project-cover) img, .project-branding figure:not(.project-cover) img { aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
-.project-collaboration figure:not(.project-cover) img { aspect-ratio: 1 / 1; object-fit: cover; }
+.project-expansion { padding: 0 0 clamp(36px, 7vw, 100px); animation: reveal .4s ease both; }
+.designed-section { position: relative; min-height: min(78vw, 1020px); padding: clamp(26px, 3vw, 52px); background: #fff; overflow: hidden; }
+.designed-section h3 { position: relative; z-index: 4; margin: 0; font-family: "Caviar Dreams", sans-serif; font-size: clamp(16px, 1.35vw, 24px); font-weight: 700; text-decoration: underline; text-transform: uppercase; }
+
+.style-collage { position: absolute; inset: 8% 2% 2%; }
+.style-collage img { position: absolute; width: 16%; max-height: 31%; object-fit: cover; }
+.style-collage img:nth-child(1) { left: 1%; top: 1%; }
+.style-collage img:nth-child(2) { left: 26%; top: 1%; width: 25%; }
+.style-collage img:nth-child(3) { left: 58%; top: 12%; width: 19%; }
+.style-collage img:nth-child(4) { right: 2%; top: 5%; }
+.style-collage img:nth-child(5) { left: 12%; top: 43%; width: 14%; }
+.style-collage img:nth-child(6) { left: 3%; bottom: 8%; width: 13%; }
+.style-collage img:nth-child(7) { left: 31%; bottom: 0; width: 13%; }
+.style-collage img:nth-child(8) { left: 58%; bottom: 8%; width: 13%; }
+.style-collage img:nth-child(9) { right: 1%; bottom: 8%; width: 16%; }
+
+.illustration-design { min-height: min(69vw, 900px); }
+.illustration-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5%; margin-top: 12%; }
+.illustration-grid img { width: 100%; aspect-ratio: .75; object-fit: cover; object-position: top; }
+.draw-statement { display: flex; align-items: center; gap: 2vw; margin-top: 4%; font-family: "Caviar Dreams", sans-serif; font-size: clamp(48px, 6vw, 102px); font-weight: 700; line-height: 1; text-transform: uppercase; }
+.draw-statement i { display: block; width: 5px; height: 1.55em; background: var(--ink); }
+.illustration-design > p { margin: 1.5% 0 0; font-family: "Montserrat", sans-serif; font-size: clamp(11px, 1.05vw, 17px); font-weight: 600; line-height: 1.15; }
+
+.collaboration-design { min-height: min(68vw, 900px); }
+.collab-copy { position: absolute; left: 6%; top: 19%; width: 25%; font-family: "Montserrat", sans-serif; }
+.collab-copy h4 { margin: 0 0 10px; font-family: "Arial Black Local", sans-serif; font-size: clamp(17px, 1.55vw, 27px); text-transform: uppercase; }
+.collab-copy .concept { margin: 0 0 34px; font-size: clamp(11px, .9vw, 15px); }
+.collab-copy p { margin: 0 0 12px; font-size: clamp(11px, .95vw, 16px); font-weight: 800; line-height: 1.1; }
+.collab-visual { position: absolute; right: 0; top: 19%; width: 67%; }
+.collab-scene { width: 100%; }
+.collab-product { position: absolute; z-index: 2; right: 8%; bottom: -29%; width: 48%; mix-blend-mode: multiply; }
+
+.trends-design { min-height: min(68vw, 900px); }
+.trends-copy { position: absolute; left: 2%; top: 31%; width: 29%; font-family: "Montserrat", sans-serif; font-size: clamp(10px, .95vw, 16px); font-weight: 700; line-height: 1.16; }
+.trends-copy p { margin: 0; }
+.trend-board { position: absolute; }
+.trend-board img { width: 100%; }
+.trend-board.deer { left: 37%; top: 29%; width: 28%; }
+.trend-board.stirrup { right: 4%; top: 5%; width: 28%; }
+.trend-board.high-neck { right: 4%; bottom: 4%; width: 28%; }
+.trends-design::after { content: ""; position: absolute; left: 66%; top: 4%; bottom: 4%; width: 2px; background: var(--ink); }
+
+.branding-design { min-height: min(68vw, 900px); }
+.brand { position: absolute; margin: 0; display: grid; align-items: center; gap: 8%; }
+.brand img { width: 100%; max-height: 51vw; object-fit: contain; }
+.brand figcaption { font-family: "Montserrat", sans-serif; font-size: clamp(11px, 1.05vw, 17px); font-weight: 800; line-height: 1.25; }
+.brand-koya { left: 12%; top: 18%; width: 37%; grid-template-columns: 1.3fr 1fr; }
+.brand-belvare { left: 39%; top: 35%; width: 33%; grid-template-columns: .8fr 1.2fr; }
+.brand-augustine { right: 2%; top: 29%; width: 27%; grid-template-columns: .8fr 1.2fr; }
 @keyframes reveal { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
 footer { margin-top: clamp(50px, 9vw, 130px); padding: 36px 6.4vw; display: flex; align-items: center; justify-content: space-between; gap: 28px; background: var(--ink); color: var(--paper); font-family: "Montserrat", sans-serif; font-size: 12px; font-weight: 800; text-transform: uppercase; }
@@ -100,9 +141,28 @@ footer a { text-underline-offset: 4px; }
   .work-number { font-size: 12px; }
   .arrow { font-size: 30px; }
   .view-more { font-size: 8px; }
-  .project-expansion { grid-template-columns: 1fr; gap: 8px; padding-bottom: 34px; }
-  .project-cover { grid-column: auto; }
-  .project-cover img { max-height: none; }
+  .project-expansion { padding-bottom: 34px; }
+  .designed-section { min-height: auto; padding: 26px 16px 34px; }
+  .style-collage { position: static; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 30px; }
+  .style-collage img, .style-collage img:nth-child(n) { position: static; width: 100%; max-height: none; aspect-ratio: 4 / 5; object-fit: cover; }
+  .style-collage img:nth-child(2) { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+  .illustration-grid { grid-template-columns: repeat(2, 1fr); margin-top: 34px; gap: 8px; }
+  .draw-statement { font-size: 42px; gap: 12px; margin-top: 28px; }
+  .draw-statement i { width: 3px; }
+  .illustration-design > p { margin-top: 16px; font-size: 11px; line-height: 1.3; }
+  .collab-copy, .collab-visual, .trends-copy, .trend-board, .brand { position: static; width: 100%; }
+  .collab-copy { margin-top: 34px; }
+  .collab-copy .concept { margin-bottom: 18px; }
+  .collab-visual { margin-top: 26px; }
+  .collab-product { position: relative; right: auto; bottom: auto; width: 72%; margin: -15% 0 0 auto; }
+  .trends-design::after { display: none; }
+  .trends-copy { margin: 34px 0 26px; font-size: 11px; line-height: 1.3; }
+  .trend-board { margin-bottom: 8px; }
+  .branding-design { display: flex; flex-direction: column; gap: 28px; }
+  .branding-design h3 { margin-bottom: 6px; }
+  .brand, .brand-koya, .brand-belvare, .brand-augustine { display: flex; flex-direction: column; gap: 14px; }
+  .brand img { max-height: none; }
+  .brand figcaption { order: 2; font-size: 11px; }
   footer { flex-direction: column; align-items: flex-start; padding: 34px 20px; }
   footer nav { width: 100%; justify-content: space-between; }
 }
