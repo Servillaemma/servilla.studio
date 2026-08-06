@@ -87,7 +87,7 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .illustration-design { min-height: auto; aspect-ratio: 843 / 596; background: transparent; }
 .illustration-grid { position: absolute; left: 4%; right: 4.8%; top: 23%; display: grid; grid-template-columns: repeat(4, 1fr); align-items: start; gap: 2.6%; margin: 0; }
 .illustration-grid img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; object-position: initial; }
-.draw-statement { position: absolute; left: 4%; top: 68.5%; display: flex; align-items: flex-end; gap: clamp(12px, 2.15vw, 36px); width: 48%; margin: 0; font-family: "Arial Black Local", "Arial Black", Arial, sans-serif; font-size: clamp(37px, 5.5vw, 92px); font-weight: 400; line-height: .88; letter-spacing: -.055em; text-transform: uppercase; white-space: nowrap; }
+.draw-statement { position: absolute; left: 4%; top: 68.5%; display: flex; align-items: flex-end; gap: clamp(12px, 2.15vw, 36px); width: 48%; margin: 0; font-family: "Caviar Dreams", sans-serif; font-size: clamp(37px, 5.5vw, 92px); font-weight: 700; line-height: .88; letter-spacing: -.055em; text-transform: uppercase; white-space: nowrap; }
 .draw-statement .draw-i { display: block; flex: 0 0 auto; width: .1em; height: 1.48em; overflow: hidden; color: transparent; background: var(--ink); font-size: 1em; line-height: 1.48; letter-spacing: 0; }
 .illustration-design > p { position: absolute; left: 4%; right: 4.8%; top: 85.5%; margin: 0; font-family: "Montserrat", sans-serif; font-size: clamp(7px, .82vw, 14px); font-weight: 600; line-height: 1.12; }
 
