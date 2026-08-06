@@ -85,11 +85,11 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 @keyframes style-marquee { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-25%, 0, 0); } }
 
 .illustration-design { min-height: auto; aspect-ratio: 843 / 596; background: transparent; }
-.illustration-grid { position: absolute; left: .6%; right: .6%; top: 23%; display: grid; grid-template-columns: repeat(4, 1fr); align-items: start; gap: 2.6%; margin: 0; }
+.illustration-grid { position: absolute; left: 4%; right: 4.8%; top: 23%; display: grid; grid-template-columns: repeat(4, 1fr); align-items: start; gap: 2.6%; margin: 0; }
 .illustration-grid img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; object-position: initial; }
-.draw-statement { position: absolute; left: .6%; top: 68.5%; display: flex; align-items: center; gap: 2.5%; width: 52%; margin: 0; font-family: "Caviar Dreams", sans-serif; font-size: clamp(37px, 5.5vw, 92px); font-weight: 700; line-height: 1; text-transform: uppercase; white-space: nowrap; }
+.draw-statement { position: absolute; left: 4%; top: 68.5%; display: flex; align-items: center; gap: 2.5%; width: 48%; margin: 0; font-family: "Caviar Dreams", sans-serif; font-size: clamp(37px, 5.5vw, 92px); font-weight: 700; line-height: 1; text-transform: uppercase; white-space: nowrap; }
 .draw-statement i { display: block; flex: 0 0 clamp(3px, .38vw, 6px); width: clamp(3px, .38vw, 6px); height: 1.45em; background: var(--ink); }
-.illustration-design > p { position: absolute; left: .6%; right: 2%; top: 85.5%; margin: 0; font-family: "Montserrat", sans-serif; font-size: clamp(7px, .82vw, 14px); font-weight: 600; line-height: 1.12; }
+.illustration-design > p { position: absolute; left: 4%; right: 4.8%; top: 85.5%; margin: 0; font-family: "Montserrat", sans-serif; font-size: clamp(7px, .82vw, 14px); font-weight: 600; line-height: 1.12; }
 
 .collaboration-design { min-height: min(68vw, 900px); }
 .collab-copy { position: absolute; left: 6%; top: 19%; width: 25%; font-family: "Arial Regular Local", Arial, sans-serif; font-weight: 400; }
@@ -156,10 +156,10 @@ footer a { text-underline-offset: 4px; }
   .rail-2 .style-motion-card { width: clamp(118px, 35vw, 195px); height: 80%; }
   .illustration-design { min-height: auto; padding: 18px 10px; aspect-ratio: 843 / 596; }
   .illustration-design h3 { font-size: clamp(8px, 1.85vw, 15px); }
-  .illustration-grid { left: .6%; right: .6%; top: 23%; grid-template-columns: repeat(4, 1fr); gap: 2.6%; margin: 0; }
-  .draw-statement { left: .6%; top: 68.5%; width: 52%; gap: 2.5%; margin: 0; font-size: clamp(20px, 7.2vw, 46px); }
+  .illustration-grid { left: 4%; right: 4.8%; top: 23%; grid-template-columns: repeat(4, 1fr); gap: 2.6%; margin: 0; }
+  .draw-statement { left: 4%; top: 68.5%; width: 48%; gap: 2.5%; margin: 0; font-size: clamp(20px, 7.2vw, 46px); }
   .draw-statement i { width: clamp(2px, .55vw, 4px); }
-  .illustration-design > p { left: .6%; right: 2%; top: 85.5%; margin: 0; font-size: clamp(4.6px, 1.42vw, 9px); line-height: 1.08; }
+  .illustration-design > p { left: 4%; right: 4.8%; top: 85.5%; margin: 0; font-size: clamp(4.6px, 1.42vw, 9px); line-height: 1.08; }
   .collab-copy, .collab-visual, .brand { position: static; width: 100%; }
   .collab-copy { margin-top: 34px; }
   .collab-copy .concept { margin-bottom: 18px; }
