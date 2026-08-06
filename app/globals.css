@@ -101,21 +101,21 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .illustration-grid img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; object-position: initial; }
 .draw-statement { position: absolute; left: 4%; top: 68.5%; display: flex; align-items: flex-end; gap: clamp(12px, 2.15vw, 36px); width: 48%; margin: 0; font-family: "Caviar Dreams", sans-serif; font-size: clamp(37px, 5.5vw, 92px); font-weight: 700; line-height: .88; letter-spacing: -.055em; text-transform: uppercase; white-space: nowrap; }
 .draw-statement .draw-i { display: block; flex: 0 0 auto; width: .1em; height: 1.48em; overflow: hidden; color: transparent; background: var(--ink); font-size: 1em; line-height: 1.48; letter-spacing: 0; }
-.illustration-design > p { position: absolute; left: 4%; right: 4.8%; top: 85.5%; margin: 0; font-family: "Montserrat", sans-serif; font-size: clamp(7px, .82vw, 14px); font-weight: 600; line-height: 1.12; }
+.illustration-design > p { position: absolute; left: 4%; right: 4.8%; top: 85.5%; margin: 0; font-family: "Montserrat", sans-serif; font-size: clamp(9px, 1.17vw, 20px); font-weight: 600; line-height: 1.12; }
 
 .collaboration-design { min-height: min(68vw, 900px); background: transparent; font-family: "Montserrat", sans-serif; }
 .collaboration-design h3 { font-family: "Montserrat", sans-serif; }
 .collab-copy { position: absolute; left: 6%; top: 19%; width: 25%; font-family: "Montserrat", sans-serif; font-weight: 600; }
-.collab-copy h4 { margin: 0 0 10px; font-family: "Montserrat", sans-serif; font-size: clamp(17px, 1.55vw, 27px); text-transform: uppercase; }
-.collab-copy .concept { margin: 0 0 34px; font-size: clamp(11px, .9vw, 15px); font-weight: 300; }
-.collab-copy p { margin: 0 0 12px; font-size: clamp(11px, .95vw, 16px); font-weight: 600; line-height: 1.1; text-align: justify; text-align-last: justify; }
+.collab-copy h4 { margin: 0 0 10px; font-family: "Montserrat", sans-serif; font-size: clamp(9px, 1.17vw, 20px); text-transform: uppercase; }
+.collab-copy .concept { margin: 0 0 34px; font-size: clamp(9px, 1.17vw, 20px); font-weight: 300; }
+.collab-copy p { margin: 0 0 12px; font-size: clamp(9px, 1.17vw, 20px); font-weight: 600; line-height: 1.1; text-align: justify; text-align-last: justify; }
 .collab-copy .concept { text-align: left; text-align-last: auto; }
 .collab-visual { position: absolute; right: 0; top: 19%; width: 67%; min-height: 61%; isolation: isolate; }
 .collab-scene { position: relative; z-index: 1; width: 100%; }
 
 .trends-design { min-height: auto; aspect-ratio: 844 / 596; background: transparent; font-family: "Montserrat", sans-serif; }
 .trends-design h3 { font-family: "Montserrat", sans-serif; }
-.trends-copy { position: absolute; left: 3.8%; top: 31.5%; width: 26.5%; font-family: "Montserrat", sans-serif; font-size: clamp(8px, .83vw, 14px); font-weight: 600; line-height: 1.08; }
+.trends-copy { position: absolute; left: 3.8%; top: 31.5%; width: 26.5%; font-family: "Montserrat", sans-serif; font-size: clamp(9px, 1.17vw, 20px); font-weight: 600; line-height: 1.08; }
 .trends-copy p { margin: 0; text-align: justify; text-align-last: left; }
 .trends-visual { position: absolute; inset: 0; }
 .trend-board { position: absolute; margin: 0; }
@@ -206,14 +206,15 @@ footer a { text-underline-offset: 4px; }
   .illustration-design h3 { font-size: clamp(8px, 1.85vw, 15px); }
   .illustration-grid { left: 4%; right: 4.8%; top: 23%; grid-template-columns: repeat(4, 1fr); gap: 2.6%; margin: 0; }
   .draw-statement { left: 4%; top: 68.5%; width: 48%; gap: clamp(6px, 2.15vw, 18px); margin: 0; font-size: clamp(20px, 7.2vw, 46px); }
-  .illustration-design > p { left: 4%; right: 4.8%; top: 85.5%; margin: 0; font-size: clamp(4.6px, 1.42vw, 9px); line-height: 1.08; }
+  .illustration-design > p { left: 4%; right: 4.8%; top: 85.5%; margin: 0; font-size: clamp(4.5px, 1.17vw, 9.6px); line-height: 1.08; }
   .collab-copy, .collab-visual { position: static; width: 100%; }
   .collab-copy { margin-top: 34px; }
+  .collab-copy h4, .collab-copy .concept, .collab-copy p { font-size: clamp(4.5px, 1.17vw, 9.6px); }
   .collab-copy .concept { margin-bottom: 18px; }
   .collab-visual { position: relative; margin: 26px 0 0; }
   .trends-design { min-height: auto; padding: 18px 10px; aspect-ratio: 844 / 596; }
   .trends-design h3 { font-size: clamp(8px, 1.85vw, 15px); }
-  .trends-copy { left: 3.8%; top: 31.5%; width: 26.5%; margin: 0; font-size: clamp(4.8px, 1.15vw, 9.4px); line-height: 1.04; }
+  .trends-copy { left: 3.8%; top: 31.5%; width: 26.5%; margin: 0; font-size: clamp(4.5px, 1.17vw, 9.6px); line-height: 1.04; }
   .branding-design { min-height: auto; padding: 18px 10px; aspect-ratio: 3218 / 2082; }
   .branding-design h3 { font-size: clamp(8px, 1.85vw, 15px); }
   .branding-boards { left: 5.2%; right: 4.8%; top: 21%; gap: 7.4%; }
