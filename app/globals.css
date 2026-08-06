@@ -123,13 +123,11 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .trend-board.high-neck { left: 61%; top: 51%; width: 22.5%; height: 44%; }
 .trends-design::after { content: ""; position: absolute; z-index: 2; left: 59.8%; top: 5.5%; bottom: 5%; width: 2px; background: var(--ink); }
 
-.branding-design { min-height: min(68vw, 900px); }
-.brand { position: absolute; margin: 0; display: grid; align-items: center; gap: 8%; }
-.brand img { width: 100%; max-height: 51vw; object-fit: contain; }
-.brand figcaption { font-family: "Montserrat", sans-serif; font-size: clamp(11px, 1.05vw, 17px); font-weight: 800; line-height: 1.25; }
-.brand-koya { left: 12%; top: 18%; width: 37%; grid-template-columns: 1.3fr 1fr; }
-.brand-belvare { left: 39%; top: 35%; width: 33%; grid-template-columns: .8fr 1.2fr; }
-.brand-augustine { right: 2%; top: 29%; width: 27%; grid-template-columns: .8fr 1.2fr; }
+.branding-design { min-height: auto; aspect-ratio: 3218 / 2082; background: transparent; }
+.branding-boards { position: absolute; left: 5.2%; right: 4.8%; top: 21%; display: grid; grid-template-columns: repeat(3, 1fr); align-items: start; gap: 7.4%; }
+.brand { margin: 0; min-width: 0; }
+.brand img { width: 100%; height: auto; object-fit: contain; }
+.branding-copy { position: absolute; left: 5.8%; right: 5.2%; bottom: 8.2%; margin: 0; font-family: "Caviar Dreams", sans-serif; font-size: clamp(9px, 1.17vw, 20px); font-weight: 700; line-height: 1.18; letter-spacing: .11em; }
 @keyframes reveal { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
 footer { margin-top: clamp(50px, 9vw, 130px); padding: 36px 6.4vw; display: flex; align-items: center; justify-content: space-between; gap: 28px; background: var(--ink); color: var(--paper); font-family: "Montserrat", sans-serif; font-size: 12px; font-weight: 800; text-transform: uppercase; }
@@ -175,18 +173,17 @@ footer a { text-underline-offset: 4px; }
   .illustration-grid { left: 4%; right: 4.8%; top: 23%; grid-template-columns: repeat(4, 1fr); gap: 2.6%; margin: 0; }
   .draw-statement { left: 4%; top: 68.5%; width: 48%; gap: clamp(6px, 2.15vw, 18px); margin: 0; font-size: clamp(20px, 7.2vw, 46px); }
   .illustration-design > p { left: 4%; right: 4.8%; top: 85.5%; margin: 0; font-size: clamp(4.6px, 1.42vw, 9px); line-height: 1.08; }
-  .collab-copy, .collab-visual, .brand { position: static; width: 100%; }
+  .collab-copy, .collab-visual { position: static; width: 100%; }
   .collab-copy { margin-top: 34px; }
   .collab-copy .concept { margin-bottom: 18px; }
   .collab-visual { position: relative; margin: 26px 0 0; }
   .trends-design { min-height: auto; padding: 18px 10px; aspect-ratio: 844 / 596; }
   .trends-design h3 { font-size: clamp(8px, 1.85vw, 15px); }
   .trends-copy { left: 3.8%; top: 31.5%; width: 26.5%; margin: 0; font-size: clamp(4.8px, 1.15vw, 9.4px); line-height: 1.04; }
-  .branding-design { display: flex; flex-direction: column; gap: 28px; }
-  .branding-design h3 { margin-bottom: 6px; }
-  .brand, .brand-koya, .brand-belvare, .brand-augustine { display: flex; flex-direction: column; gap: 14px; }
-  .brand img { max-height: none; }
-  .brand figcaption { order: 2; font-size: 11px; }
+  .branding-design { min-height: auto; padding: 18px 10px; aspect-ratio: 3218 / 2082; }
+  .branding-design h3 { font-size: clamp(8px, 1.85vw, 15px); }
+  .branding-boards { left: 5.2%; right: 4.8%; top: 21%; gap: 7.4%; }
+  .branding-copy { left: 5.8%; right: 5.2%; bottom: 8.2%; font-size: clamp(4.5px, 1.17vw, 9.6px); line-height: 1.14; }
   footer { flex-direction: column; align-items: flex-start; padding: 34px 20px; }
   footer nav { width: 100%; justify-content: space-between; }
 }

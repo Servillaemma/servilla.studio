@@ -126,9 +126,12 @@ function ProjectSection({ type }: { type: string }) {
   return (
     <div className="designed-section branding-design">
       <h3>Branding</h3>
-      <figure className="brand brand-koya"><img src="/sections/branding/01.png" alt="Brand board Koya Paris" loading="lazy" /><figcaption>Une identité organique, responsable et chaleureuse, pensée autour de la proximité et de la transparence.</figcaption></figure>
-      <figure className="brand brand-belvare"><figcaption>Un univers solaire et balnéaire porté par une palette vive, joyeuse et inclusive.</figcaption><img src="/sections/branding/02.png" alt="Brand board Belvare" loading="lazy" /></figure>
-      <figure className="brand brand-augustine"><figcaption>Une direction colorée, expressive et contemporaine, construite autour d’une typographie forte.</figcaption><img src="/sections/branding/03.png" alt="Brand board Augustine" loading="lazy" /></figure>
+      <div className="branding-boards" aria-label="Trois projets de branding">
+        <figure className="brand"><img src="/sections/branding/koya.png" alt="Brand board Koya Paris" loading="lazy" /></figure>
+        <figure className="brand"><img src="/sections/branding/augustine.png" alt="Brand board Augustine" loading="lazy" /></figure>
+        <figure className="brand"><img src="/sections/branding/belvare.png" alt="Brand board Belvare" loading="lazy" /></figure>
+      </div>
+      <p className="branding-copy">Chaque projet de branding est développé à partir d'une réflexion stratégique sur l'identité de la marque. De la recherche d'inspirations à la définition de l'univers visuel, chaque élément est pensé pour traduire son ADN avec cohérence et créer une identité forte et distinctive.</p>
     </div>
   );
 }
