@@ -23,27 +23,65 @@ const works = [
   { title: "Branding", folder: "branding" },
 ];
 
+function StyleMotionCarousel() {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const rows = [
+    ["editorial-flatlay.jpg", "editorial-coat.png", "editorial-bag.png"],
+    ["editorial-chair-pink.png", "editorial-hanger-blue.jpg", "editorial-look.png"],
+    ["editorial-chair-denim.png", "editorial-hanger-stripes.jpg", "editorial-red.png"],
+  ];
+
+  useEffect(() => {
+    let frame = 0;
+    const updateFocus = () => {
+      const carousel = carouselRef.current;
+      if (!carousel) return;
+      const center = window.innerWidth / 2;
+      const influence = Math.max(window.innerWidth * 0.38, 280);
+
+      carousel.querySelectorAll<HTMLElement>(".style-motion-card").forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const distance = Math.abs(rect.left + rect.width / 2 - center);
+        const proximity = Math.max(0, 1 - distance / influence);
+        const eased = proximity * proximity * (3 - 2 * proximity);
+        card.style.setProperty("--focus-scale", String(1 + eased * 0.42));
+        card.style.setProperty("--focus-opacity", String(0.58 + eased * 0.42));
+        card.style.setProperty("--focus-blur", `${(1 - eased) * 0.7}px`);
+        card.style.zIndex = String(Math.round(eased * 10) + 1);
+      });
+      frame = requestAnimationFrame(updateFocus);
+    };
+
+    frame = requestAnimationFrame(updateFocus);
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  return (
+    <div className="style-motion" ref={carouselRef}>
+      {rows.map((row, rowIndex) => {
+        const loop = [...row, ...row, ...row, ...row];
+        return (
+          <div className={`style-motion-rail rail-${rowIndex + 1}`} key={rowIndex}>
+            <div className="style-motion-track">
+              {loop.map((image, index) => (
+                <figure className="style-motion-card" key={`${image}-${index}`} aria-hidden={index >= row.length}>
+                  <img src={`/images/${image}`} alt={index < row.length ? `Composition de style ${rowIndex * 3 + index + 1}` : ""} loading="lazy" />
+                </figure>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 function ProjectSection({ type }: { type: string }) {
   if (type === "style") {
-    const images = [
-      "editorial-flatlay.jpg",
-      "editorial-coat.png",
-      "editorial-bag.png",
-      "editorial-chair-pink.png",
-      "editorial-hanger-blue.jpg",
-      "editorial-look.png",
-      "editorial-chair-denim.png",
-      "editorial-hanger-stripes.jpg",
-      "editorial-red.png",
-    ];
     return (
       <div className="designed-section style-design">
         <h3>Style</h3>
-        <div className="style-collage">
-          {images.map((image, index) => (
-            <img key={image} src={`/images/${image}`} alt={`Composition de style ${index + 1}`} loading="lazy" />
-          ))}
-        </div>
+        <StyleMotionCarousel />
       </div>
     );
   }
@@ -189,3 +227,6 @@ export default function Home() {
     </main>
   );
 }
+"use client";
+
+import { useEffect, useRef } from "react";
