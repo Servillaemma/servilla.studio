@@ -3,5 +3,8 @@
   "framework": null,
   "buildCommand": "npm exec vite -- build --config vite.vercel.config.ts",
   "outputDirectory": "vercel-dist",
-  "installCommand": "npm ci"
+  "installCommand": "npm ci",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
