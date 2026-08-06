@@ -25,10 +25,10 @@ const works = [
 
 function StyleMotionCarousel() {
   const carouselRef = useRef<HTMLDivElement>(null);
-  const rows = [
-    ["editorial-flatlay.jpg", "editorial-coat.png", "editorial-bag.png"],
-    ["editorial-chair-pink.png", "editorial-hanger-blue.jpg", "editorial-look.png"],
-    ["editorial-chair-denim.png", "editorial-hanger-stripes.jpg", "editorial-red.png"],
+  const images = [
+    "editorial-flatlay.jpg", "editorial-coat.png", "editorial-bag.png",
+    "editorial-chair-pink.png", "editorial-hanger-blue.jpg", "editorial-look.png",
+    "editorial-chair-denim.png", "editorial-hanger-stripes.jpg", "editorial-red.png",
   ];
 
   useEffect(() => {
@@ -39,15 +39,15 @@ function StyleMotionCarousel() {
       const center = window.innerWidth / 2;
       const influence = Math.max(window.innerWidth * 0.38, 280);
 
-      carousel.querySelectorAll<HTMLElement>(".style-motion-card").forEach((card) => {
-        const rect = card.getBoundingClientRect();
+      carousel.querySelectorAll<HTMLElement>(".style-motion-focus").forEach((focus) => {
+        const rect = focus.getBoundingClientRect();
         const distance = Math.abs(rect.left + rect.width / 2 - center);
         const proximity = Math.max(0, 1 - distance / influence);
         const eased = proximity * proximity * (3 - 2 * proximity);
-        card.style.setProperty("--focus-scale", String(1 + eased * 0.42));
-        card.style.setProperty("--focus-opacity", String(0.58 + eased * 0.42));
-        card.style.setProperty("--focus-blur", `${(1 - eased) * 0.7}px`);
-        card.style.zIndex = String(Math.round(eased * 10) + 1);
+        focus.style.setProperty("--focus-scale", String(1 + eased * 0.5));
+        focus.style.setProperty("--focus-opacity", String(0.64 + eased * 0.36));
+        focus.style.setProperty("--focus-blur", `${(1 - eased) * 0.55}px`);
+        focus.parentElement!.style.zIndex = String(Math.round(eased * 10) + 1);
       });
       frame = requestAnimationFrame(updateFocus);
     };
@@ -58,20 +58,13 @@ function StyleMotionCarousel() {
 
   return (
     <div className="style-motion" ref={carouselRef}>
-      {rows.map((row, rowIndex) => {
-        const loop = [...row, ...row, ...row, ...row];
-        return (
-          <div className={`style-motion-rail rail-${rowIndex + 1}`} key={rowIndex}>
-            <div className="style-motion-track">
-              {loop.map((image, index) => (
-                <figure className="style-motion-card" key={`${image}-${index}`} aria-hidden={index >= row.length}>
-                  <img src={`/images/${image}`} alt={index < row.length ? `Composition de style ${rowIndex * 3 + index + 1}` : ""} loading="lazy" />
-                </figure>
-              ))}
-            </div>
+      {images.map((image, index) => (
+        <figure className="style-motion-card" key={image}>
+          <div className="style-motion-focus">
+            <img src={`/images/${image}`} alt={`Composition de style ${index + 1}`} loading="lazy" />
           </div>
-        );
-      })}
+        </figure>
+      ))}
     </div>
   );
 }
