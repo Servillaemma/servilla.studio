@@ -92,6 +92,59 @@ function BrandingGallery() {
   );
 }
 
+function DigitalCollection() {
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+  const boardImages = [
+    ["architecture-angular.jpeg", "digital-arch arch-one", "Architecture déconstructiviste angulaire"],
+    ["architecture-hadid.jpeg", "digital-arch arch-two", "Architecture courbe de Zaha Hadid"],
+    ["architecture-pavilion.jpg", "digital-arch arch-three", "Pavillon moderniste au bord de l'eau"],
+    ["architecture-modern.png", "digital-arch arch-four", "Architecture moderniste géométrique"],
+    ["look-feature.png", "digital-look look-feature", "Silhouette digitale principale"],
+    ["look-detail-dark.png", "digital-look look-detail-one", "Détail de col sombre"],
+    ["look-detail-boots.png", "digital-look look-detail-two", "Détail des bottes"],
+    ["look-main.png", "digital-look look-thumb-one", "Silhouette digitale bleu et rouge"],
+    ["look-boots.png", "digital-look look-thumb-two", "Détail de la silhouette et des bottes"],
+    ["look-beige.png", "digital-look look-thumb-three", "Silhouette digitale beige"],
+    ["look-volume.png", "digital-look look-volume", "Silhouette digitale sculpturale"],
+    ["look-portrait.jpg", "digital-look look-portrait", "Portrait de la silhouette digitale"],
+  ];
+
+  const imageButton = (image: string, className: string, alt: string) => {
+    const isActive = activeImage === image;
+    return (
+      <button
+        className={`digital-zoom-image ${className}${isActive ? " is-active" : ""}${activeImage && !isActive ? " is-muted" : ""}`}
+        key={image}
+        type="button"
+        aria-label={`${isActive ? "Réduire" : "Agrandir"} ${alt}`}
+        aria-pressed={isActive}
+        onClick={() => setActiveImage(isActive ? null : image)}
+      >
+        <img src={`/sections/digital/${image}`} alt={alt} loading="lazy" />
+      </button>
+    );
+  };
+
+  return (
+    <div className="digital-design">
+      <section className="designed-section digital-board">
+        <h3>Collection digitale</h3>
+        <div className="digital-title"><strong>Collection signature</strong><span>Collection digitale</span></div>
+        <div className="digital-signature"><b>by</b><span>re<br />b<span>e</span><sub>1</sub></span></div>
+        {boardImages.slice(0, 2).map(([image, className, alt]) => imageButton(image, className, alt))}
+        <p className="digital-copy">Inspirée par les codes de l'architecture minimaliste et déconstructiviste, cette collection réinterprète le vêtement comme un espace à construire. Les silhouettes jouent sur les contrastes entre rigueur géométrique et déséquilibre maîtrisé, créant une esthétique à la fois architecturale et fonctionnelle.</p>
+        {boardImages.slice(2, 10).map(([image, className, alt]) => imageButton(image, className, alt))}
+        <div className="digital-volume">vol..me</div>
+        {boardImages.slice(10).map(([image, className, alt]) => imageButton(image, className, alt))}
+      </section>
+
+      <section className="digital-opening" aria-label="Présentation de la collection digitale">
+        {imageButton("look-group.png", "digital-opening-group", "Quatre silhouettes de la collection digitale")}
+      </section>
+    </div>
+  );
+}
+
 function ProjectSection({ type }: { type: string }) {
   if (type === "style") {
     return (
@@ -135,36 +188,7 @@ function ProjectSection({ type }: { type: string }) {
   }
 
   if (type === "digital") {
-    return (
-      <div className="digital-design">
-        <section className="digital-opening" aria-label="Présentation de la collection digitale">
-          <img className="digital-opening-group" src="/sections/digital/look-group.png" alt="Quatre silhouettes de la collection digitale" loading="lazy" />
-        </section>
-
-        <section className="designed-section digital-board">
-          <h3>Collection digitale</h3>
-          <div className="digital-title"><strong>Collection signature</strong><span>Collection digitale</span></div>
-          <div className="digital-signature"><b>by</b><span>re<br />b<span>e</span><sub>1</sub></span></div>
-
-          <img className="digital-arch arch-one" src="/sections/digital/architecture-angular.jpeg" alt="Architecture déconstructiviste angulaire" loading="lazy" />
-          <img className="digital-arch arch-two" src="/sections/digital/architecture-hadid.jpeg" alt="Architecture courbe de Zaha Hadid" loading="lazy" />
-          <p className="digital-copy">Inspirée par les codes de l'architecture minimaliste et déconstructiviste, cette collection réinterprète le vêtement comme un espace à construire. Les silhouettes jouent sur les contrastes entre rigueur géométrique et déséquilibre maîtrisé, créant une esthétique à la fois architecturale et fonctionnelle.</p>
-          <img className="digital-arch arch-three" src="/sections/digital/architecture-pavilion.jpg" alt="Pavillon moderniste au bord de l'eau" loading="lazy" />
-          <img className="digital-arch arch-four" src="/sections/digital/architecture-modern.png" alt="Architecture moderniste géométrique" loading="lazy" />
-
-          <img className="digital-look look-feature" src="/sections/digital/look-feature.png" alt="Silhouette digitale principale" loading="lazy" />
-          <img className="digital-look look-detail-one" src="/sections/digital/look-detail-dark.png" alt="Détail de col sombre" loading="lazy" />
-          <img className="digital-look look-detail-two" src="/sections/digital/look-detail-boots.png" alt="Détail des bottes" loading="lazy" />
-          <img className="digital-look look-thumb-one" src="/sections/digital/look-main.png" alt="Silhouette digitale bleu et rouge" loading="lazy" />
-          <img className="digital-look look-thumb-two" src="/sections/digital/look-boots.png" alt="Détail de la silhouette et des bottes" loading="lazy" />
-          <img className="digital-look look-thumb-three" src="/sections/digital/look-beige.png" alt="Silhouette digitale beige" loading="lazy" />
-
-          <div className="digital-volume">vol..me</div>
-          <img className="digital-look look-volume" src="/sections/digital/look-volume.png" alt="Silhouette digitale sculpturale" loading="lazy" />
-          <img className="digital-look look-portrait" src="/sections/digital/look-portrait.jpg" alt="Portrait de la silhouette digitale" loading="lazy" />
-        </section>
-      </div>
-    );
+    return <DigitalCollection />;
   }
 
   if (type === "trends") {
