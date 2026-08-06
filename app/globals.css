@@ -74,24 +74,24 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 
 .style-design { min-height: min(76vw, 980px); padding-inline: 0; background: transparent; }
 .style-design h3 { margin-left: clamp(26px, 3vw, 52px); }
-.style-motion { position: absolute; inset: 10% 0 2%; overflow: hidden; isolation: isolate; }
-.style-motion-card { position: absolute; width: clamp(105px, 12vw, 205px); height: clamp(145px, 18vw, 300px); margin: 0; padding: 0; border: 0; background: transparent; color: inherit; cursor: zoom-in; will-change: transform; animation: style-drift-a 18s ease-in-out infinite alternate; }
+.style-motion { position: absolute; inset: 8% 0 1%; overflow: hidden; isolation: isolate; border-radius: 0 0 28px 28px; }
+.style-motion-card { --focus-x: 0vw; --focus-y: 0vh; --focus-scale: 3.6; position: absolute; z-index: 1; width: clamp(92px, 11vw, 180px); height: clamp(125px, 16vw, 265px); margin: 0; padding: 0; border: 0; background: transparent; color: inherit; cursor: zoom-in; opacity: .78; will-change: transform, opacity; animation: style-camera-focus 27s cubic-bezier(.55, .04, .32, 1) infinite both; }
 .style-motion-card:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; }
-.style-motion-focus { --focus-scale: 1; --focus-opacity: .64; --focus-blur: .55px; width: 100%; height: 100%; opacity: var(--focus-opacity); filter: blur(var(--focus-blur)); transform: scale(var(--focus-scale)); transform-origin: center; transition: opacity .12s linear, filter .12s linear; will-change: transform, opacity, filter; }
+.style-motion-drift { width: 100%; height: 100%; animation: style-small-drift 7s ease-in-out infinite alternate; }
 .style-motion-card img { width: 100%; height: 100%; object-fit: contain; }
-.style-motion-card:nth-child(1) { left: 2%; top: 3%; animation-duration: 19s; animation-delay: -8s; }
-.style-motion-card:nth-child(2) { left: 24%; top: 0; width: clamp(150px, 18vw, 300px); animation-name: style-drift-b; animation-duration: 23s; animation-delay: -14s; }
-.style-motion-card:nth-child(3) { left: 53%; top: 14%; animation-name: style-drift-c; animation-duration: 17s; animation-delay: -4s; }
-.style-motion-card:nth-child(4) { right: 3%; top: 2%; animation-name: style-drift-d; animation-duration: 21s; animation-delay: -11s; }
-.style-motion-card:nth-child(5) { left: 13%; top: 40%; animation-name: style-drift-c; animation-duration: 22s; animation-delay: -16s; }
-.style-motion-card:nth-child(6) { left: 2%; bottom: 2%; animation-name: style-drift-b; animation-duration: 18s; animation-delay: -5s; }
-.style-motion-card:nth-child(7) { left: 35%; bottom: 1%; animation-name: style-drift-d; animation-duration: 24s; animation-delay: -18s; }
-.style-motion-card:nth-child(8) { left: 61%; bottom: 5%; animation-duration: 20s; animation-delay: -13s; }
-.style-motion-card:nth-child(9) { right: 2%; bottom: 10%; animation-name: style-drift-b; animation-duration: 16s; animation-delay: -7s; }
-@keyframes style-drift-a { 0% { transform: translate3d(-3vw, -2vh, 0) rotate(-2deg); } 33% { transform: translate3d(12vw, 8vh, 0) rotate(2deg); } 67% { transform: translate3d(5vw, -9vh, 0) rotate(-1deg); } 100% { transform: translate3d(-7vw, 10vh, 0) rotate(2deg); } }
-@keyframes style-drift-b { 0% { transform: translate3d(7vw, -5vh, 0) rotate(2deg); } 35% { transform: translate3d(-11vw, 9vh, 0) rotate(-2deg); } 72% { transform: translate3d(9vw, 13vh, 0) rotate(1deg); } 100% { transform: translate3d(-5vw, -7vh, 0) rotate(-1deg); } }
-@keyframes style-drift-c { 0% { transform: translate3d(-8vw, 8vh, 0) rotate(-1deg); } 38% { transform: translate3d(10vw, -8vh, 0) rotate(2deg); } 70% { transform: translate3d(-4vw, -13vh, 0) rotate(-2deg); } 100% { transform: translate3d(12vw, 5vh, 0) rotate(1deg); } }
-@keyframes style-drift-d { 0% { transform: translate3d(4vw, 10vh, 0) rotate(1deg); } 30% { transform: translate3d(-10vw, -6vh, 0) rotate(-2deg); } 64% { transform: translate3d(8vw, -12vh, 0) rotate(2deg); } 100% { transform: translate3d(-6vw, 7vh, 0) rotate(-1deg); } }
+.style-motion-card:nth-child(1) { --focus-x: 37vw; --focus-y: 28vh; --focus-scale: 3.2; left: 6%; top: 8%; animation-delay: 0s; width: clamp(115px, 14vw, 230px); }
+.style-motion-card:nth-child(2) { --focus-x: 12vw; --focus-y: 35vh; left: 32%; top: 1%; animation-delay: -3s; }
+.style-motion-card:nth-child(3) { --focus-x: -16vw; --focus-y: 29vh; left: 60%; top: 9%; animation-delay: -6s; }
+.style-motion-card:nth-child(4) { --focus-x: -39vw; --focus-y: 26vh; right: 4%; top: 15%; animation-delay: -9s; }
+.style-motion-card:nth-child(5) { --focus-x: 31vw; --focus-y: -6vh; left: 13%; top: 44%; animation-delay: -12s; }
+.style-motion-card:nth-child(6) { --focus-x: 3vw; --focus-y: -5vh; left: 42%; top: 43%; animation-delay: -15s; }
+.style-motion-card:nth-child(7) { --focus-x: -35vw; --focus-y: -33vh; right: 8%; bottom: 7%; animation-delay: -18s; }
+.style-motion-card:nth-child(8) { --focus-x: 20vw; --focus-y: -34vh; left: 24%; bottom: 4%; animation-delay: -21s; }
+.style-motion-card:nth-child(9) { --focus-x: -22vw; --focus-y: -30vh; left: 66%; bottom: 11%; animation-delay: -24s; }
+.style-motion-card:nth-child(3n + 2) .style-motion-drift { animation-delay: -3s; animation-duration: 8.5s; }
+.style-motion-card:nth-child(3n) .style-motion-drift { animation-delay: -5s; animation-duration: 6.5s; }
+@keyframes style-camera-focus { 0%, 4% { z-index: 1; opacity: .76; transform: translate3d(0, 0, 0) scale(.82) rotate(-1deg); } 7% { z-index: 20; opacity: .96; transform: translate3d(var(--focus-x), var(--focus-y), 0) scale(2.1) rotate(0); } 9%, 12% { z-index: 20; opacity: 1; transform: translate3d(var(--focus-x), var(--focus-y), 0) scale(var(--focus-scale)) rotate(0); } 15% { z-index: 20; opacity: .94; transform: translate3d(var(--focus-x), var(--focus-y), 0) scale(1.9) rotate(.4deg); } 18%, 100% { z-index: 1; opacity: .76; transform: translate3d(0, 0, 0) scale(.82) rotate(-1deg); } }
+@keyframes style-small-drift { from { transform: translate3d(-7px, -9px, 0) rotate(-1deg); } to { transform: translate3d(10px, 11px, 0) rotate(1.2deg); } }
 .style-featured { position: fixed; z-index: 100; inset: 0; width: 100vw; height: 100svh; padding: 7vh 8vw; border: 0; background: rgb(250 250 250 / .72); backdrop-filter: blur(6px); cursor: zoom-out; animation: style-featured-in .42s cubic-bezier(.2, .78, .25, 1) both; }
 .style-featured img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 24px 45px rgb(0 0 0 / .12)); }
 @keyframes style-featured-in { from { opacity: 0; transform: scale(.72); } to { opacity: 1; transform: scale(1); } }
@@ -159,9 +159,17 @@ footer a { text-underline-offset: 4px; }
   .designed-section { min-height: auto; padding: 26px 16px 34px; }
   .style-design { min-height: clamp(620px, 132vw, 760px); padding-inline: 0; }
   .style-design h3 { margin-left: 16px; }
-  .style-motion { inset: 9% 0 2%; }
-  .style-motion-card { width: clamp(88px, 26vw, 155px); height: clamp(120px, 38vw, 220px); }
-  .style-motion-card:nth-child(2) { width: clamp(112px, 34vw, 190px); }
+  .style-motion { inset: 8% 0 1%; }
+  .style-motion-card { --focus-scale: 2.65; width: clamp(72px, 19vw, 125px); height: clamp(100px, 28vw, 178px); }
+  .style-motion-card:nth-child(1) { --focus-x: 34vw; --focus-y: 27vh; --focus-scale: 2.4; width: clamp(88px, 24vw, 150px); }
+  .style-motion-card:nth-child(2) { --focus-x: 11vw; --focus-y: 33vh; }
+  .style-motion-card:nth-child(3) { --focus-x: -16vw; --focus-y: 27vh; }
+  .style-motion-card:nth-child(4) { --focus-x: -37vw; --focus-y: 24vh; }
+  .style-motion-card:nth-child(5) { --focus-x: 29vw; --focus-y: -5vh; }
+  .style-motion-card:nth-child(6) { --focus-x: 2vw; --focus-y: -4vh; }
+  .style-motion-card:nth-child(7) { --focus-x: -33vw; --focus-y: -29vh; }
+  .style-motion-card:nth-child(8) { --focus-x: 19vw; --focus-y: -31vh; }
+  .style-motion-card:nth-child(9) { --focus-x: -21vw; --focus-y: -27vh; }
   .illustration-design { min-height: auto; padding: 18px 10px; aspect-ratio: 843 / 596; }
   .illustration-design h3 { font-size: clamp(8px, 1.85vw, 15px); }
   .illustration-grid { left: 4%; right: 4.8%; top: 23%; grid-template-columns: repeat(4, 1fr); gap: 2.6%; margin: 0; }

@@ -28,39 +28,12 @@ const works = [
 ];
 
 function StyleMotionCarousel() {
-  const carouselRef = useRef<HTMLDivElement>(null);
   const focusTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [featuredImage, setFeaturedImage] = useState<string | null>(null);
   const images = [
-    "editorial-flatlay.jpg", "editorial-coat.png", "editorial-bag.png",
-    "editorial-chair-pink.png", "editorial-hanger-blue.jpg", "editorial-look.png",
-    "editorial-chair-denim.png", "editorial-hanger-stripes.jpg", "editorial-red.png",
+    "01.png", "02.png", "03.png", "04.png", "05.png",
+    "06.jpg", "07.jpg", "08.png", "09.png",
   ];
-
-  useEffect(() => {
-    let frame = 0;
-    const updateFocus = () => {
-      const carousel = carouselRef.current;
-      if (!carousel) return;
-      const center = window.innerWidth / 2;
-      const influence = Math.max(window.innerWidth * 0.38, 280);
-
-      carousel.querySelectorAll<HTMLElement>(".style-motion-focus").forEach((focus) => {
-        const rect = focus.getBoundingClientRect();
-        const distance = Math.abs(rect.left + rect.width / 2 - center);
-        const proximity = Math.max(0, 1 - distance / influence);
-        const eased = proximity * proximity * (3 - 2 * proximity);
-        focus.style.setProperty("--focus-scale", String(1 + eased * 0.5));
-        focus.style.setProperty("--focus-opacity", String(0.64 + eased * 0.36));
-        focus.style.setProperty("--focus-blur", `${(1 - eased) * 0.55}px`);
-        focus.parentElement!.style.zIndex = String(Math.round(eased * 10) + 1);
-      });
-      frame = requestAnimationFrame(updateFocus);
-    };
-
-    frame = requestAnimationFrame(updateFocus);
-    return () => cancelAnimationFrame(frame);
-  }, []);
 
   useEffect(() => () => {
     if (focusTimerRef.current) clearTimeout(focusTimerRef.current);
@@ -73,17 +46,17 @@ function StyleMotionCarousel() {
   };
 
   return (
-    <div className="style-motion" ref={carouselRef}>
+    <div className="style-motion">
       {images.map((image, index) => (
         <button className="style-motion-card" key={image} type="button" onClick={() => featureImage(image)} aria-label={`Agrandir la composition de style ${index + 1} pendant trois secondes`}>
-          <div className="style-motion-focus">
-            <img src={`/images/${image}`} alt={`Composition de style ${index + 1}`} loading="lazy" />
+          <div className="style-motion-drift">
+            <img src={`/sections/style/${image}`} alt={`Composition de style ${index + 1}`} loading="lazy" />
           </div>
         </button>
       ))}
       {featuredImage && (
         <button className="style-featured" type="button" onClick={() => setFeaturedImage(null)} aria-label="Fermer l’image agrandie">
-          <img src={`/images/${featuredImage}`} alt="Composition de style agrandie" />
+          <img src={`/sections/style/${featuredImage}`} alt="Composition de style agrandie" />
         </button>
       )}
     </div>
