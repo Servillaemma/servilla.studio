@@ -134,7 +134,11 @@ function DigitalCollection() {
         {boardImages.slice(0, 2).map(([image, className, alt]) => imageButton(image, className, alt))}
         <p className="digital-copy">Inspirée par les codes de l'architecture minimaliste et déconstructiviste, cette collection réinterprète le vêtement comme un espace à construire. Les silhouettes jouent sur les contrastes entre rigueur géométrique et déséquilibre maîtrisé, créant une esthétique à la fois architecturale et fonctionnelle.</p>
         {boardImages.slice(2, 10).map(([image, className, alt]) => imageButton(image, className, alt))}
-        <div className="digital-volume">vol..me</div>
+        <div className="digital-volume" aria-label="vol...me">
+          <span>vol</span>
+          <span className="volume-dots" aria-hidden="true"><i /><i /><i /></span>
+          <span>me</span>
+        </div>
         {boardImages.slice(10).map(([image, className, alt]) => imageButton(image, className, alt))}
       </section>
 

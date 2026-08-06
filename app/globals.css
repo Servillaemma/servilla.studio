@@ -147,7 +147,9 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .look-thumb-one { left: 11%; top: 88.3%; width: 9%; height: 10.5%; }
 .look-thumb-two { left: 21.2%; top: 88.3%; width: 9%; height: 10.5%; }
 .look-thumb-three { left: 31.2%; top: 88.3%; width: 9%; height: 10.5%; }
-.digital-volume { position: absolute; left: 43%; top: 77.8%; z-index: 2; font-family: "Arial Black Local", sans-serif; font-size: clamp(30px, 5.2vw, 90px); font-weight: 900; letter-spacing: -.08em; color: #4c4c4c; }
+.digital-volume { position: absolute; left: 43%; top: 77.8%; z-index: 2; display: flex; align-items: flex-end; font-family: "Arial Black Local", "Arial Black", sans-serif; font-size: clamp(30px, 5.2vw, 90px); font-weight: 900; line-height: .76; letter-spacing: -.105em; color: #50504f; transform: scaleX(.76); transform-origin: left bottom; }
+.volume-dots { display: flex; gap: .035em; margin: 0 .065em .015em .09em; }
+.volume-dots i { display: block; width: .16em; height: .16em; background: currentColor; }
 .look-volume { left: 43.8%; top: 82%; width: 19%; height: 17%; }
 .look-portrait { left: 65.5%; top: 88.2%; width: 9%; height: 10.6%; }
 
