@@ -90,9 +90,11 @@ function ProjectSection({ type }: { type: string }) {
           <p>Cette démarche me permet de décrypter les inspirations émergentes, d’analyser leur potentiel créatif et de comprendre comment elles peuvent être réinterprétées dans une approche plus actuelle et durable.</p>
           <p>Cette approche combine veille créative, analyse stylistique et réflexion produit afin de traduire les influences actuelles en propositions cohérentes, sensibles et adaptées à l’identité d’une marque.</p>
         </div>
-        <div className="trend-board deer"><img src="/sections/trends/01.png" alt="Analyse de tendance Deer Print" loading="lazy" /></div>
-        <div className="trend-board stirrup"><img src="/sections/trends/03.png" alt="Analyse de tendance Stirrup Pant" loading="lazy" /></div>
-        <div className="trend-board high-neck"><img src="/sections/trends/02.png" alt="Analyse de tendance High Necked" loading="lazy" /></div>
+        <div className="trends-visual" aria-label="Trois analyses de tendances mode">
+          <figure className="trend-board deer"><img src="/sections/trends/01.png" alt="Analyse de tendance Deer Print" loading="lazy" /></figure>
+          <figure className="trend-board stirrup"><img src="/sections/trends/03.png" alt="Analyse de tendance Stirrup Pant" loading="lazy" /></figure>
+          <figure className="trend-board high-neck"><img src="/sections/trends/02.png" alt="Analyse de tendance High Necked" loading="lazy" /></figure>
+        </div>
       </div>
     );
   }
