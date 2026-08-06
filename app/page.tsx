@@ -220,7 +220,7 @@ export default function Home() {
                     <span className="work-number">{String(index + 1).padStart(2, "0")}</span>
                     <strong>{work.title}</strong>
                     <span className="work-action" aria-label={`Afficher les projets : ${work.title}`}>
-                      <span className="arrow" aria-hidden="true">↗</span>
+                      <span className="arrow" aria-hidden="true" />
                       <span className="view-more">View more</span>
                     </span>
                   </summary>

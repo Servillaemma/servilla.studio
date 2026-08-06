@@ -61,10 +61,13 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .work-number { font-family: "Caviar Dreams", sans-serif; font-size: 16px; font-weight: 700; }
 .work-list strong { text-transform: uppercase; font-size: clamp(14px, 1.15vw, 20px); font-weight: 900; }
 .work-action { justify-self: end; display: flex; flex-direction: column; align-items: flex-end; text-transform: uppercase; }
-.arrow { font-family: Arial, sans-serif; font-size: 40px; line-height: .72; transition: transform .2s ease; }
+.arrow { position: relative; width: 24px; height: 31px; transition: transform .35s cubic-bezier(.22, .76, .22, 1); }
+.arrow::before { content: ""; position: absolute; top: 3px; left: 50%; width: 2px; height: 22px; background: currentColor; transform: translateX(-50%); }
+.arrow::after { content: ""; position: absolute; left: 50%; bottom: 4px; width: 10px; height: 10px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateX(-50%) rotate(45deg); }
 .view-more { margin-top: 5px; font-size: 11px; font-weight: 800; }
-.work-list summary:hover .arrow, .work-list summary:focus-visible .arrow { transform: translate(4px, -4px); }
-.work-list details[open] .arrow { transform: rotate(90deg); }
+.work-list summary:hover .arrow, .work-list summary:focus-visible .arrow { transform: translateY(3px); }
+.work-list details[open] .arrow { transform: rotate(180deg); }
+.work-list details[open] summary:hover .arrow, .work-list details[open] summary:focus-visible .arrow { transform: rotate(180deg) translateY(3px); }
 .work-list details[open] .view-more::after { content: " — close"; }
 .work-disabled { opacity: .36; cursor: default; }
 .coming-soon { justify-self: end; font-size: 10px; font-weight: 800; text-transform: uppercase; }
@@ -186,7 +189,7 @@ footer a { text-underline-offset: 4px; }
   .work-list summary, .work-row { min-height: 76px; grid-template-columns: 42px 1fr 76px; }
   .work-list strong { font-size: 12px; padding-right: 8px; }
   .work-number { font-size: 12px; }
-  .arrow { font-size: 30px; }
+  .arrow { width: 22px; height: 28px; }
   .view-more { font-size: 8px; }
   .project-expansion { padding-bottom: 34px; }
   .designed-section { min-height: auto; padding: 26px 16px 34px; }
