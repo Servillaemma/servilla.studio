@@ -126,9 +126,7 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .digital-title span { font-size: clamp(8px, 1.05vw, 18px); }
 .digital-signature { position: absolute; left: 66%; top: 5.2%; display: flex; align-items: end; gap: 12px; color: #111; }
 .digital-signature b { font-size: clamp(8px, 1.05vw, 18px); }
-.digital-signature > span { width: clamp(38px, 5.8vw, 90px); aspect-ratio: 1; padding: 8%; border: 2px solid #777; font-family: Georgia, serif; font-size: clamp(13px, 1.75vw, 30px); line-height: .58; text-align: center; }
-.digital-signature > span span { color: #bc5b56; }
-.digital-signature sub { font-family: "Montserrat", sans-serif; font-weight: 700; }
+.digital-signature img { width: clamp(38px, 5.8vw, 90px); height: auto; object-fit: contain; }
 .digital-arch, .digital-look { position: absolute; margin: 0; }
 .digital-zoom-image { z-index: 1; padding: 0; border: 0; background: transparent; cursor: zoom-in; opacity: 1; mix-blend-mode: multiply; transform: scale(1); transition: transform 900ms cubic-bezier(.22, .76, .22, 1), opacity 700ms ease; transform-origin: center; will-change: transform, opacity; }
 .digital-zoom-image:hover { transform: scale(1.025); }
@@ -261,7 +259,7 @@ footer a { text-underline-offset: 4px; }
   .digital-title strong { font-size: clamp(5px, 1.45vw, 12px); }
   .digital-title span, .digital-signature b { font-size: clamp(4.5px, 1.05vw, 9px); }
   .digital-signature { gap: 5px; }
-  .digital-signature > span { width: clamp(22px, 5.8vw, 48px); padding: 7%; border-width: 1px; font-size: clamp(7px, 1.75vw, 15px); }
+  .digital-signature img { width: clamp(22px, 5.8vw, 48px); }
   .digital-copy { font-size: clamp(4.5px, 1.17vw, 9.6px); }
   .trends-design { min-height: auto; padding: 18px 10px; aspect-ratio: 844 / 596; }
   .trends-design h3 { font-size: clamp(8px, 1.85vw, 15px); }

@@ -130,7 +130,7 @@ function DigitalCollection() {
       <section className="designed-section digital-board">
         <h3>Collection digitale</h3>
         <div className="digital-title"><strong>Collection signature</strong><span>Collection digitale</span></div>
-        <div className="digital-signature"><b>by</b><span>re<br />b<span>e</span><sub>1</sub></span></div>
+        <div className="digital-signature"><b>by</b><img src="/sections/digital/signature-logo.png" alt="Logo Rebe 1" loading="lazy" /></div>
         {boardImages.slice(0, 2).map(([image, className, alt]) => imageButton(image, className, alt))}
         <p className="digital-copy">Inspirée par les codes de l'architecture minimaliste et déconstructiviste, cette collection réinterprète le vêtement comme un espace à construire. Les silhouettes jouent sur les contrastes entre rigueur géométrique et déséquilibre maîtrisé, créant une esthétique à la fois architecturale et fonctionnelle.</p>
         {boardImages.slice(2, 10).map(([image, className, alt]) => imageButton(image, className, alt))}
