@@ -105,7 +105,7 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .collab-scene { position: relative; z-index: 1; width: 100%; }
 .collab-product { position: absolute; z-index: 3; left: 66.666%; right: auto; bottom: 0; width: 48%; transform: translate(-50%, 50%); mix-blend-mode: multiply; }
 
-.trends-design { min-height: min(68vw, 900px); }
+.trends-design { min-height: min(68vw, 900px); background: transparent; }
 .trends-copy { position: absolute; left: 2%; top: 31%; width: 29%; font-family: "Montserrat", sans-serif; font-size: clamp(10px, .95vw, 16px); font-weight: 700; line-height: 1.16; }
 .trends-copy p { margin: 0; }
 .trend-board { position: absolute; }
