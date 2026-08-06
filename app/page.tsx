@@ -3,16 +3,16 @@
 import { useEffect, useRef, useState } from "react";
 
 const gallery = [
-  ["editorial-hanger-stripes.jpg", "Superposition de chemise blanche et maille rayée"],
-  ["editorial-flatlay.jpg", "Silhouette blanche et accessoires sur une peau brune"],
-  ["editorial-red.png", "Silhouette rouge et accessoires graphiques"],
-  ["editorial-look.png", "Silhouette rouge, denim et sac brun"],
-  ["editorial-chair-pink.png", "Sélection rose et bleue sur chaise vintage"],
-  ["editorial-bag.png", "Sac Miu Miu et objets du quotidien"],
-  ["editorial-hanger-blue.jpg", "Chemise bleue et débardeur noir suspendus"],
-  ["editorial-coat.png", "Trench beige et cravate en composition éditoriale"],
-  ["editorial-chair-denim.png", "Denim, mocassins et accessoires sur chaise"],
-  ["editorial-bag.png", "Accessoires dans un sac brun"],
+  ["header-01.jpg", "Superposition de chemise blanche et maille rayée"],
+  ["header-02.jpg", "Chemise blanche, mocassins et accessoires sur fourrure brune"],
+  ["header-03.png", "Silhouette rouge et accessoires graphiques"],
+  ["header-04.png", "Silhouette rouge, denim et sac brun"],
+  ["header-05.png", "Sélection rose et bleue sur chaise vintage"],
+  ["header-06.png", "Sac Miu Miu et objets du quotidien"],
+  ["header-07.jpg", "Chemise bleue et débardeur noir suspendus"],
+  ["header-08.png", "Trench beige et cravate en composition éditoriale"],
+  ["header-09.png", "Denim, mocassins et accessoires sur chaise"],
+  ["header-10.png", "Accessoires dans un sac brun"],
 ];
 
 const works = [

@@ -47,7 +47,7 @@ h1 { margin: 0; font-family: "Arial Black Local", "Arial Black", sans-serif; fon
 .gallery-strip::-webkit-scrollbar { display: none; }
 .gallery-item { margin: 0; min-width: 0; }
 .gallery-item span { display: block; margin-bottom: 8px; font-family: "Caviar Dreams", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .12em; }
-.gallery-item img { width: 100%; height: clamp(105px, 15vh, 170px); object-fit: cover; object-position: center; }
+.gallery-item img { width: 100%; height: clamp(105px, 15vh, 170px); object-fit: contain; object-position: center; }
 
 .works-section { min-height: 100svh; padding: clamp(58px, 7vw, 110px) 6.4vw 5vw; }
 .manifesto { max-width: 1180px; margin: 0 auto clamp(56px, 8vh, 100px); text-align: center; font-family: "Montserrat", sans-serif; font-weight: 800; font-size: clamp(14px, 1.25vw, 22px); line-height: 1.12; }
@@ -243,6 +243,7 @@ footer a { text-underline-offset: 4px; }
   .style-motion-card:nth-child(7) { --focus-x: -33vw; --focus-y: -29vh; }
   .style-motion-card:nth-child(8) { --focus-x: 19vw; --focus-y: -31vh; }
   .style-motion-card:nth-child(9) { --focus-x: -21vw; --focus-y: -27vh; }
+  .style-design { min-height: 100svh; }
   .illustration-design { min-height: auto; padding: 18px 10px; aspect-ratio: 843 / 596; }
   .illustration-design h3 { font-size: clamp(8px, 1.85vw, 15px); }
   .illustration-grid { left: 4%; right: 4.8%; top: 23%; grid-template-columns: repeat(4, 1fr); gap: 2.6%; margin: 0; }
@@ -291,3 +292,4 @@ footer a { text-underline-offset: 4px; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .arrow, .brand { transition: none; } .project-expansion { animation: none; } .style-motion-card { animation-play-state: paused; } }
+@media (max-width: 820px) { .style-motion-card { animation-play-state: running !important; } }
