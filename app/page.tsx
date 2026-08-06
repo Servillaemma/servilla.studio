@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 const gallery = [
   ["editorial-hanger-stripes.jpg", "Superposition de chemise blanche et maille rayée"],
   ["editorial-flatlay.jpg", "Silhouette blanche et accessoires sur une peau brune"],
@@ -25,6 +29,8 @@ const works = [
 
 function StyleMotionCarousel() {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const focusTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [featuredImage, setFeaturedImage] = useState<string | null>(null);
   const images = [
     "editorial-flatlay.jpg", "editorial-coat.png", "editorial-bag.png",
     "editorial-chair-pink.png", "editorial-hanger-blue.jpg", "editorial-look.png",
@@ -56,15 +62,30 @@ function StyleMotionCarousel() {
     return () => cancelAnimationFrame(frame);
   }, []);
 
+  useEffect(() => () => {
+    if (focusTimerRef.current) clearTimeout(focusTimerRef.current);
+  }, []);
+
+  const featureImage = (image: string) => {
+    if (focusTimerRef.current) clearTimeout(focusTimerRef.current);
+    setFeaturedImage(image);
+    focusTimerRef.current = setTimeout(() => setFeaturedImage(null), 3000);
+  };
+
   return (
     <div className="style-motion" ref={carouselRef}>
       {images.map((image, index) => (
-        <figure className="style-motion-card" key={image}>
+        <button className="style-motion-card" key={image} type="button" onClick={() => featureImage(image)} aria-label={`Agrandir la composition de style ${index + 1} pendant trois secondes`}>
           <div className="style-motion-focus">
             <img src={`/images/${image}`} alt={`Composition de style ${index + 1}`} loading="lazy" />
           </div>
-        </figure>
+        </button>
       ))}
+      {featuredImage && (
+        <button className="style-featured" type="button" onClick={() => setFeaturedImage(null)} aria-label="Fermer l’image agrandie">
+          <img src={`/images/${featuredImage}`} alt="Composition de style agrandie" />
+        </button>
+      )}
     </div>
   );
 }
@@ -220,6 +241,3 @@ export default function Home() {
     </main>
   );
 }
-"use client";
-
-import { useEffect, useRef } from "react";
