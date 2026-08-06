@@ -95,7 +95,7 @@ function ProjectSection({ type }: { type: string }) {
             <img key={image} src={`/sections/illustration/${image}`} alt={`Illustration de silhouette ${index + 1}`} loading="lazy" />
           ))}
         </div>
-        <div className="draw-statement"><span>What</span><i></i><span>Draw</span></div>
+        <div className="draw-statement" aria-label="What I Draw"><span>What</span><span className="draw-i" aria-hidden="true">I</span><span>Draw</span></div>
         <p>Nourrie par l’architecture contemporaine, mes illustrations digitales explorent le dialogue entre structure, matière et mouvement. J’y transpose les lignes, volumes et les contrastes des espaces architecturaux afin de créer des compositions où la rigueur formelle rencontre une approche plus sensible et intuitive.</p>
       </div>
     );
