@@ -176,7 +176,7 @@ export default function Home() {
           <img src="/images/emma-servilla.jpg" alt="Portrait en noir et blanc d’Emma Servilla" />
           <figcaption>
             <span>basée à Paris</span>
-            <a href="#works">Voir plus</a>
+            <a href="/a-propos">Voir plus</a>
           </figcaption>
         </figure>
 
