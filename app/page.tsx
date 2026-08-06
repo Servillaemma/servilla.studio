@@ -63,6 +63,35 @@ function StyleMotionCarousel() {
   );
 }
 
+function BrandingGallery() {
+  const [activeBrand, setActiveBrand] = useState<string | null>(null);
+  const brands = [
+    ["koya.png", "Brand board Koya Paris"],
+    ["augustine.png", "Brand board Augustine"],
+    ["belvare.png", "Brand board Belvare"],
+  ];
+
+  return (
+    <div className="branding-boards" data-active={activeBrand ? "true" : "false"} aria-label="Trois projets de branding">
+      {brands.map(([image, label]) => {
+        const isActive = activeBrand === image;
+        return (
+          <button
+            className={`brand${isActive ? " is-active" : ""}${activeBrand && !isActive ? " is-muted" : ""}`}
+            key={image}
+            type="button"
+            aria-label={`${isActive ? "Réduire" : "Agrandir"} ${label}`}
+            aria-pressed={isActive}
+            onClick={() => setActiveBrand(isActive ? null : image)}
+          >
+            <img src={`/sections/branding/${image}`} alt={label} loading="lazy" />
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 function ProjectSection({ type }: { type: string }) {
   if (type === "style") {
     return (
@@ -126,11 +155,7 @@ function ProjectSection({ type }: { type: string }) {
   return (
     <div className="designed-section branding-design">
       <h3>Branding</h3>
-      <div className="branding-boards" aria-label="Trois projets de branding">
-        <figure className="brand"><img src="/sections/branding/koya.png" alt="Brand board Koya Paris" loading="lazy" /></figure>
-        <figure className="brand"><img src="/sections/branding/augustine.png" alt="Brand board Augustine" loading="lazy" /></figure>
-        <figure className="brand"><img src="/sections/branding/belvare.png" alt="Brand board Belvare" loading="lazy" /></figure>
-      </div>
+      <BrandingGallery />
       <p className="branding-copy">Chaque projet de branding est développé à partir d'une réflexion stratégique sur l'identité de la marque. De la recherche d'inspirations à la définition de l'univers visuel, chaque élément est pensé pour traduire son ADN avec cohérence et créer une identité forte et distinctive.</p>
     </div>
   );

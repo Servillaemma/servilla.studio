@@ -125,7 +125,11 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 
 .branding-design { min-height: auto; aspect-ratio: 3218 / 2082; background: transparent; }
 .branding-boards { position: absolute; left: 5.2%; right: 4.8%; top: 21%; display: grid; grid-template-columns: repeat(3, 1fr); align-items: start; gap: 7.4%; }
-.brand { margin: 0; min-width: 0; }
+.brand { position: relative; z-index: 1; min-width: 0; margin: 0; padding: 0; border: 0; background: transparent; cursor: zoom-in; opacity: 1; transform: scale(1); transition: transform 850ms cubic-bezier(.22, .76, .22, 1), opacity 650ms ease; will-change: transform, opacity; }
+.brand:hover { transform: scale(1.025); }
+.brand:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; }
+.brand.is-active { z-index: 5; cursor: zoom-out; transform: scale(1.5); }
+.brand.is-muted { opacity: .42; }
 .brand img { width: 100%; height: auto; object-fit: contain; }
 .branding-copy { position: absolute; left: 5.8%; right: 5.2%; bottom: 8.2%; margin: 0; font-family: "Caviar Dreams", sans-serif; font-size: clamp(9px, 1.17vw, 20px); font-weight: 700; line-height: 1.18; letter-spacing: .11em; }
 @keyframes reveal { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
@@ -188,4 +192,4 @@ footer a { text-underline-offset: 4px; }
   footer nav { width: 100%; justify-content: space-between; }
 }
 
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .arrow { transition: none; } .project-expansion { animation: none; } .style-motion-card { animation-play-state: paused; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .arrow, .brand { transition: none; } .project-expansion { animation: none; } .style-motion-card { animation-play-state: paused; } }
