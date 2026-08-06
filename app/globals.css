@@ -113,8 +113,8 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .collab-scene { position: relative; z-index: 1; width: 100%; }
 
 .trends-design { min-height: auto; aspect-ratio: 844 / 596; background: transparent; }
-.trends-copy { position: absolute; left: 3.8%; top: 31.5%; width: 26.5%; font-family: "Arial Regular Local", Arial, sans-serif; font-size: clamp(8px, .83vw, 14px); font-weight: 400; line-height: 1.08; }
-.trends-copy p { margin: 0; text-align: justify; text-align-last: justify; }
+.trends-copy { position: absolute; left: 3.8%; top: 31.5%; width: 26.5%; font-family: "Montserrat", sans-serif; font-size: clamp(8px, .83vw, 14px); font-weight: 600; line-height: 1.08; }
+.trends-copy p { margin: 0; text-align: justify; text-align-last: left; }
 .trends-visual { position: absolute; inset: 0; }
 .trend-board { position: absolute; margin: 0; }
 .trend-board img { width: 100%; height: 100%; object-fit: contain; }
