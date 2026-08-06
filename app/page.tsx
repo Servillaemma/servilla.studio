@@ -127,7 +127,6 @@ function ProjectSection({ type }: { type: string }) {
         </div>
         <div className="collab-visual">
           <img className="collab-scene" src="/sections/collaboration/01.png" alt="Concept Loewe et Aesop dans un intérieur botanique" loading="lazy" />
-          <img className="collab-product" src="/sections/collaboration/02.png" alt="Puzzle Bag botanique Loewe et Aesop" loading="lazy" />
         </div>
       </div>
     );
