@@ -46,7 +46,7 @@ h1 { margin: 0; font-family: "Arial Black Local", "Arial Black", sans-serif; fon
 }
 .gallery-strip::-webkit-scrollbar { display: none; }
 .gallery-item { margin: 0; min-width: 0; }
-.gallery-item span { display: block; margin-bottom: 8px; font-family: "Montserrat", sans-serif; font-size: 13px; font-weight: 800; letter-spacing: .12em; }
+.gallery-item span { display: block; margin-bottom: 8px; font-family: "Caviar Dreams", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .12em; }
 .gallery-item img { width: 100%; height: clamp(105px, 15vh, 170px); object-fit: cover; object-position: center; }
 
 .works-section { min-height: 100svh; padding: clamp(58px, 7vw, 110px) 6.4vw 5vw; }
