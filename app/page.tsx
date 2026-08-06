@@ -176,7 +176,16 @@ export default function Home() {
           <img src="/images/emma-servilla.jpg" alt="Portrait en noir et blanc d’Emma Servilla" />
           <figcaption>
             <span>basée à Paris</span>
-            <a href="/a-propos">Voir plus</a>
+            <a
+              className="about-link"
+              href="/a-propos"
+              onClick={(event) => {
+                event.preventDefault();
+                window.location.assign("/a-propos");
+              }}
+            >
+              Voir plus
+            </a>
           </figcaption>
         </figure>
 

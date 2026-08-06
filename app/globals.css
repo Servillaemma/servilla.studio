@@ -32,7 +32,7 @@ h1 { margin: 0; font-family: "Arial Black Local", "Arial Black", sans-serif; fon
 .portrait-card > img { width: 100%; height: min(67vh, 730px); object-fit: cover; object-position: center 28%; filter: grayscale(1); }
 .portrait-card figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding-top: 22px; font-size: 14px; font-weight: 700; }
 .portrait-card figcaption span { font-style: italic; }
-.portrait-card figcaption a { text-transform: uppercase; }
+.portrait-card figcaption a { position: relative; z-index: 5; display: inline-flex; min-height: 44px; padding: 12px 0 12px 14px; align-items: center; text-transform: uppercase; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 
 .gallery-strip {
   grid-column: 1 / -1;
@@ -174,7 +174,8 @@ footer a { text-underline-offset: 4px; }
   .gallery-link { top: 24px; left: 20px; font-size: 12px; }
   .portrait-card { order: 1; width: 70vw; margin: 65px 0 0 auto; }
   .portrait-card > img { height: 48svh; min-height: 390px; }
-  .portrait-card figcaption { padding-top: 12px; font-size: 11px; }
+  .portrait-card figcaption { padding-top: 6px; font-size: 11px; }
+  .portrait-card .about-link { min-width: 96px; justify-content: flex-end; }
   .hero-title-wrap { order: 2; position: relative; z-index: 1; padding: 28px 0 36px; margin-top: -32px; }
   h1 { font-size: clamp(48px, 15vw, 82px); }
   .gallery-strip { order: 3; width: calc(100% + 40px); margin-left: -20px; padding: 22px 20px 0; grid-auto-columns: 122px; }
