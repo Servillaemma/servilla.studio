@@ -116,6 +116,35 @@ h2 { margin: 0 0 clamp(32px, 4vw, 62px); text-align: center; font-family: "Cavia
 .collab-visual { position: absolute; right: 0; top: 19%; width: 67%; min-height: 61%; isolation: isolate; }
 .collab-scene { position: relative; z-index: 1; width: 100%; }
 
+.digital-design { background: transparent; }
+.digital-opening { position: relative; width: 100%; aspect-ratio: 1310 / 694; overflow: hidden; background: #fff; }
+.digital-opening-group { position: absolute; left: 10%; top: 1%; width: 48%; height: 97%; object-fit: contain; mix-blend-mode: multiply; }
+.digital-board { min-height: auto; margin-top: clamp(36px, 5vw, 72px); padding: 0; aspect-ratio: 1382 / 1800; background: transparent; font-family: "Montserrat", sans-serif; }
+.digital-board h3 { position: absolute; left: 4%; top: 2.4%; font-family: "Montserrat", sans-serif; }
+.digital-title { position: absolute; left: 39.2%; top: 2.5%; display: flex; flex-direction: column; color: #111; text-transform: uppercase; }
+.digital-title strong { font-size: clamp(10px, 1.45vw, 24px); font-weight: 900; }
+.digital-title span { font-size: clamp(8px, 1.05vw, 18px); }
+.digital-signature { position: absolute; left: 66%; top: 5.2%; display: flex; align-items: end; gap: 12px; color: #111; }
+.digital-signature b { font-size: clamp(8px, 1.05vw, 18px); }
+.digital-signature > span { width: clamp(38px, 5.8vw, 90px); aspect-ratio: 1; padding: 8%; border: 2px solid #777; font-family: Georgia, serif; font-size: clamp(13px, 1.75vw, 30px); line-height: .58; text-align: center; }
+.digital-signature > span span { color: #bc5b56; }
+.digital-signature sub { font-family: "Montserrat", sans-serif; font-weight: 700; }
+.digital-arch, .digital-look { position: absolute; margin: 0; object-fit: contain; }
+.arch-one { left: 10.5%; top: 7.6%; width: 18.6%; }
+.arch-two { left: 10.5%; top: 16.2%; width: 18.6%; }
+.digital-copy { position: absolute; left: 53.5%; top: 25.2%; width: 21%; margin: 0; color: #111; font-size: clamp(8px, 1.17vw, 20px); font-weight: 700; line-height: 1.18; text-align: justify; text-align-last: left; }
+.arch-three { left: 53.5%; top: 41.1%; width: 20.5%; }
+.arch-four { left: 39.2%; top: 53.5%; width: 24%; }
+.look-feature { left: 13%; top: 56%; width: 21%; height: 33%; }
+.look-detail-one { left: 6.8%; top: 63.4%; width: 6.2%; height: 8%; }
+.look-detail-two { left: 6.8%; top: 72.2%; width: 6.2%; height: 8%; }
+.look-thumb-one { left: 11%; top: 88.3%; width: 9%; height: 10.5%; }
+.look-thumb-two { left: 21.2%; top: 88.3%; width: 9%; height: 10.5%; }
+.look-thumb-three { left: 31.2%; top: 88.3%; width: 9%; height: 10.5%; }
+.digital-volume { position: absolute; left: 43%; top: 77.8%; z-index: 2; font-family: "Arial Black Local", sans-serif; font-size: clamp(30px, 5.2vw, 90px); font-weight: 900; letter-spacing: -.08em; color: #4c4c4c; }
+.look-volume { left: 43.8%; top: 82%; width: 19%; height: 17%; }
+.look-portrait { left: 65.5%; top: 88.2%; width: 9%; height: 10.6%; }
+
 .trends-design { min-height: auto; aspect-ratio: 844 / 596; background: transparent; font-family: "Montserrat", sans-serif; }
 .trends-design h3 { font-family: "Montserrat", sans-serif; }
 .trends-copy { position: absolute; left: 3.8%; top: 31.5%; width: 26.5%; font-family: "Montserrat", sans-serif; font-size: clamp(9px, 1.17vw, 20px); font-weight: 600; line-height: 1.08; }
@@ -216,6 +245,14 @@ footer a { text-underline-offset: 4px; }
   .collab-copy h4, .collab-copy .concept, .collab-copy p { font-size: clamp(4.5px, 1.17vw, 9.6px); }
   .collab-copy .concept { margin-bottom: 18px; }
   .collab-visual { position: relative; margin: 26px 0 0; }
+  .digital-opening { aspect-ratio: 1310 / 694; }
+  .digital-board { margin-top: 28px; aspect-ratio: 1382 / 1800; }
+  .digital-board h3 { font-size: clamp(8px, 1.85vw, 15px); }
+  .digital-title strong { font-size: clamp(5px, 1.45vw, 12px); }
+  .digital-title span, .digital-signature b { font-size: clamp(4.5px, 1.05vw, 9px); }
+  .digital-signature { gap: 5px; }
+  .digital-signature > span { width: clamp(22px, 5.8vw, 48px); padding: 7%; border-width: 1px; font-size: clamp(7px, 1.75vw, 15px); }
+  .digital-copy { font-size: clamp(4.5px, 1.17vw, 9.6px); }
   .trends-design { min-height: auto; padding: 18px 10px; aspect-ratio: 844 / 596; }
   .trends-design h3 { font-size: clamp(8px, 1.85vw, 15px); }
   .trends-copy { left: 3.8%; top: 31.5%; width: 26.5%; margin: 0; font-size: clamp(4.5px, 1.17vw, 9.6px); line-height: 1.04; }

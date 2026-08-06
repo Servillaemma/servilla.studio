@@ -22,7 +22,7 @@ const works = [
   },
   { title: "Illustration", folder: "illustration" },
   { title: "Collaboration", folder: "collaboration" },
-  { title: "Collection digitale", folder: null },
+  { title: "Collection digitale", folder: "digital" },
   { title: "Analyse des tendances", folder: "trends" },
   { title: "Branding", folder: "branding" },
 ];
@@ -130,6 +130,39 @@ function ProjectSection({ type }: { type: string }) {
         <div className="collab-visual">
           <img className="collab-scene" src="/sections/collaboration/01.png" alt="Concept Loewe et Aesop dans un intérieur botanique" loading="lazy" />
         </div>
+      </div>
+    );
+  }
+
+  if (type === "digital") {
+    return (
+      <div className="digital-design">
+        <section className="digital-opening" aria-label="Présentation de la collection digitale">
+          <img className="digital-opening-group" src="/sections/digital/look-group.png" alt="Quatre silhouettes de la collection digitale" loading="lazy" />
+        </section>
+
+        <section className="designed-section digital-board">
+          <h3>Collection digitale</h3>
+          <div className="digital-title"><strong>Collection signature</strong><span>Collection digitale</span></div>
+          <div className="digital-signature"><b>by</b><span>re<br />b<span>e</span><sub>1</sub></span></div>
+
+          <img className="digital-arch arch-one" src="/sections/digital/architecture-angular.jpeg" alt="Architecture déconstructiviste angulaire" loading="lazy" />
+          <img className="digital-arch arch-two" src="/sections/digital/architecture-hadid.jpeg" alt="Architecture courbe de Zaha Hadid" loading="lazy" />
+          <p className="digital-copy">Inspirée par les codes de l'architecture minimaliste et déconstructiviste, cette collection réinterprète le vêtement comme un espace à construire. Les silhouettes jouent sur les contrastes entre rigueur géométrique et déséquilibre maîtrisé, créant une esthétique à la fois architecturale et fonctionnelle.</p>
+          <img className="digital-arch arch-three" src="/sections/digital/architecture-pavilion.jpg" alt="Pavillon moderniste au bord de l'eau" loading="lazy" />
+          <img className="digital-arch arch-four" src="/sections/digital/architecture-modern.png" alt="Architecture moderniste géométrique" loading="lazy" />
+
+          <img className="digital-look look-feature" src="/sections/digital/look-feature.png" alt="Silhouette digitale principale" loading="lazy" />
+          <img className="digital-look look-detail-one" src="/sections/digital/look-detail-dark.png" alt="Détail de col sombre" loading="lazy" />
+          <img className="digital-look look-detail-two" src="/sections/digital/look-detail-boots.png" alt="Détail des bottes" loading="lazy" />
+          <img className="digital-look look-thumb-one" src="/sections/digital/look-main.png" alt="Silhouette digitale bleu et rouge" loading="lazy" />
+          <img className="digital-look look-thumb-two" src="/sections/digital/look-boots.png" alt="Détail de la silhouette et des bottes" loading="lazy" />
+          <img className="digital-look look-thumb-three" src="/sections/digital/look-beige.png" alt="Silhouette digitale beige" loading="lazy" />
+
+          <div className="digital-volume">vol..me</div>
+          <img className="digital-look look-volume" src="/sections/digital/look-volume.png" alt="Silhouette digitale sculpturale" loading="lazy" />
+          <img className="digital-look look-portrait" src="/sections/digital/look-portrait.jpg" alt="Portrait de la silhouette digitale" loading="lazy" />
+        </section>
       </div>
     );
   }
